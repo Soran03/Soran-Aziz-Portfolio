@@ -11,9 +11,13 @@ function Hero() {
     return(
         <section className='container'>
             <div className='content'>
+                <h2 className='hi-text'>Hey there! I'm</h2>
                 <h1 className='title'>Soran Aziz</h1>
-                <p className='description'>Welcome! I'm Soran Aziz, an aspiring software developer. Explore my portfolio to see how I combine my expertise with passion, creating cutting-edge software solutions to deliver excellence in every project.</p>
-                <div className='social-icons'>
+                <p className='description'> Eager to take my full-stack development skills to the professional level, delivering high-quality, innovative solutions. </p>
+                <a href='#' className='projects-btn'>Projects</a>
+            </div>
+            <img className='profile-image' src={profileImage} alt='Profile Image' />
+            <div className='social-icons'>
                     <a href='https://www.linkedin.com/in/aziz-soran/'>
                         <img src={linkedInIcon} alt='LinkedIn' />
                     </a>
@@ -24,8 +28,6 @@ function Hero() {
                         <img src={emailIcon} alt='Email' />
                     </a>
                 </div>
-            </div>
-            <img className='profile-image' src={profileImage} alt='Profile Image' />
             <div className='blur1' />
             <div className='blur2' />
             <div className='blur3' />

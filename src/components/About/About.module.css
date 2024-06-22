@@ -1,0 +1,105 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    margin-top: 8rem;
+
+    padding: 10%;
+    padding-top: 1rem;
+    background-color: #000a0f;
+    overflow-y: hidden;
+    z-index: -2;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    background: -webkit-radial-gradient(#00ffc8, #0491c5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4rem ;
+    z-index: 1;
+    border-left: 0.2rem solid whitesmoke;
+    padding-left: 2rem;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.aboutImg {
+width: 35%;
+height: 35%;
+border-radius: 50px;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2rem;
+}
+
+.content li {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: -webkit-radial-gradient( #000c126f, #0000006f);
+    border-radius: 40px;
+    padding: 0.5rem 2rem;
+}
+
+.content img {
+    height: 50px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(107%) contrast(92%);
+}
+.content h3 {
+    color: #219EBC;
+}
+.content p {
+    color: whitesmoke;
+    text-align:justify;
+}
+
+.blur1 {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    top: -8rem;
+    border: 764px;
+    background: #00111692;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.blur2 {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    top: 12rem;
+    right: 0;
+    border: 764px;
+    background: #95725528;
+    z-index: -1;
+    filter: blur(200px);
+}
+
+.blur3 {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    top: 28rem;
+    left: 0;
+    border: 764px;
+    background: #95558b28;
+    z-index: -1;
+    filter: blur(200px);
+}

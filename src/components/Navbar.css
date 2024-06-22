@@ -1,20 +1,26 @@
 .navbar {
-    padding: 1rem;
+    padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family:'Poppins';
     font-weight: 400;
+    background: -webkit-radial-gradient( #000c126f, #0000006f);
+    /* border-radius: 100px; */
+    /* border: 4px solid #001E2D ; */
+
+    /* margin: 0.5rem; */
 }
 
 .navbar-brand a {
     color: whitesmoke;
-    background: -webkit-linear-gradient(180deg, #ffffff, #cacaca);
+    background: -webkit-radial-gradient( #ffffff, #b1b1b1);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .navbar-nav {
@@ -26,9 +32,14 @@
 .nav-item a {
     color: whitesmoke;
     text-decoration: none;
+    transition: 300ms ease-in-out;
 }
 
 .nav-item a:hover {
-    text-decoration: underline overline dotted rgb(255, 255, 255);
+    /* background: -webkit-radial-gradient(#00ffc8, #0491c5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: #219EBC;
+    font-weight: 700;
     
 }

@@ -3,8 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 4rem;
-    z-index: 1;
+    margin-top: 5rem;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -12,17 +11,41 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin-right: 5%;
+    animation-name: fade-in-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out ;
+}
+
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translate(-2rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0rem);
+
+    }
+}
+
+.hi-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: whitesmoke;
 }
 
 .title {
     font-size: 5rem;
     font-weight: 700;
-    background: -webkit-linear-gradient(#0491c5, #00ffc8);
+    margin-top: -0.5rem;
+    line-height: 1;
+    background: -webkit-radial-gradient(#00ffc8, #0491c5);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 8px;
+    margin-bottom: 2rem;
     z-index: 1;
     transition: font-size 1s ease-in-out;
 
@@ -30,21 +53,49 @@
 
 .title:hover {
     font-size: 6rem;
-    transition: 1s;
 }
 
 .description {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
     color: whitesmoke;
     margin-bottom: 72px;
+    line-height: 2.2;
+    max-width: 60%;
+    border-left: 0.2rem solid whitesmoke;
+    padding-left: 2rem;
 
+}
+
+.projects-btn {
+    text-decoration: none !important;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    border-radius: 100px;
+    border: 0.1rem solid whitesmoke;
+    padding: 0.8rem 3rem;
+    transition: 0.5s
+}
+
+.projects-btn:hover {
+    background-color: whitesmoke;
+    color: #001E2D;
+    
 }
 
 .social-icons {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1rem;
     justify-content: space-between;
     gap: 2rem;
+    align-self: center;
+    background: -webkit-radial-gradient( #000c126f, #0000006f);
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 100px;
 }
 
 .social-icons a {
@@ -55,17 +106,17 @@
 
 .social-icons img {
     
-    width: 3.5rem; 
-    height: 3.5rem; 
+    width: 3rem; 
+    height: 3rem; 
     transition: 0.5s;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(107%) contrast(92%);
 }
 
 .social-icons img:hover {
-    width: 4rem; 
-    height: 4rem; 
-    filter: invert(68%) sepia(67%) saturate(5631%) hue-rotate(160deg) brightness(93%) contrast(101%);
-
+    /* width: 3.5rem; 
+    height: 3.5rem;  */
+    transform: scale(1.2,1.2);
+    filter: invert(47%) sepia(73%) saturate(457%) hue-rotate(144deg) brightness(96%) contrast(95%);
 }
 
 .profile-image {
@@ -101,40 +152,17 @@
     filter: blur(100px);
 }
 
-/* .blur1 {
-    position: absolute;
-    height: 40vw;
-    width: 40vw;
-    top: -8rem;
-    border: 764px;
-    background: #023047;
-    z-index: -1;
-    filter: blur(100px);
+@media screen and (max-width:830px){
+    .container {
+        flex-direction: column-reverse;
+    }
+    .content {
+        align-items: center;
+    }
+    .social-icons {
+        flex-direction: row;
+    }
+    .title {
+        align-self: center;
+    }
 }
-
-
-.blur2 {
-    position: absolute;
-    height: 30vw;
-    width: 30vw;
-    top: 16rem;
-    right: 8rem;
-    border: 764px;
-    background: #c8aa8667;
-    z-index: -1;
-    filter: blur(100px);
-}
-
-.blur3 {
-    position: absolute;
-    height: 25vw;
-    width: 25vw;
-    top: -12rem;
-    right: 0rem;
-    border: 764px;
-    background: #c085bb67;
-    z-index: -1;
-    filter: blur(100px);
-} */
-
-
