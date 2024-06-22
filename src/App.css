@@ -1,0 +1,34 @@
+/* Apply a basic font style and background color */
+body {
+  font-family: Poppins;
+  background-color: #001520; /* Light gray background */
+  color: #333; /* Dark text color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+/* Example styles for headings */
+h1 {
+  font-size: 2rem; /* Larger font size */
+  margin-bottom: 20px; /* Bottom margin */
+}
+
+h2 {
+  font-size: 1.5rem; /* Medium font size */
+  margin-bottom: 15px; /* Bottom margin */
+}
+
+/* Basic styles for links */
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

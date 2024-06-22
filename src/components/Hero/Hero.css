@@ -1,0 +1,140 @@
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(#0491c5, #00ffc8);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    z-index: 1;
+    transition: font-size 1s ease-in-out;
+
+}
+
+.title:hover {
+    font-size: 6rem;
+    transition: 1s;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: whitesmoke;
+    margin-bottom: 72px;
+
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.social-icons a {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.social-icons img {
+    
+    width: 3.5rem; 
+    height: 3.5rem; 
+    transition: 0.5s;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(107%) contrast(92%);
+}
+
+.social-icons img:hover {
+    width: 4rem; 
+    height: 4rem; 
+    filter: invert(68%) sepia(67%) saturate(5631%) hue-rotate(160deg) brightness(93%) contrast(101%);
+
+}
+
+.profile-image {
+    width: 30rem;
+    max-width: 50%;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+    50% {
+        transform: translate(0, 20px);
+    }
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+
+ .blur1 {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    top: -8rem;
+    border: 764px;
+    background: #023047;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+/* .blur1 {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    top: -8rem;
+    border: 764px;
+    background: #023047;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+
+.blur2 {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    top: 16rem;
+    right: 8rem;
+    border: 764px;
+    background: #c8aa8667;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.blur3 {
+    position: absolute;
+    height: 25vw;
+    width: 25vw;
+    top: -12rem;
+    right: 0rem;
+    border: 764px;
+    background: #c085bb67;
+    z-index: -1;
+    filter: blur(100px);
+} */
+
+
