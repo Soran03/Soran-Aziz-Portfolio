@@ -75,3 +75,24 @@
     color: whitesmoke;
     text-align: center;
 }
+
+@media screen and (max-width:830px){
+    .container{
+        padding: 5%;
+    }
+    .mainImage {
+        width: 100%;
+    }
+    .title {
+        font-size: 2rem;
+        margin-top: 0rem;
+        margin-bottom: 2rem;
+    }
+    .description {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .skillsList{
+        padding: 0;
+    }
+}

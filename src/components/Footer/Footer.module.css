@@ -1,0 +1,43 @@
+.container {    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000a0f;
+    padding: 2rem 10%;
+    z-index: 0;
+    border-top: 1px solid whitesmoke;
+}
+
+.footerText {
+    font-size: 1.5rem;
+    background: -webkit-radial-gradient(#00ffc8, #0491c5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.legalRow {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #678791
+}
+.legalRow a {
+    color: #678791;
+    text-decoration: none !important;
+}
+
+
+/* Small screen size */
+
+@media screen and (max-width:830px){
+    .container, .legalRow {
+        flex-direction: column;
+    }
+    .footerText {
+        text-align: center;
+    }
+    .p, a {
+        margin-top: -1rem;
+    }
+}

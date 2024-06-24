@@ -10,25 +10,26 @@ import emailIcon from '/src/assets/email-icon.png'
 function Hero() {
     return(
         <section className='container'>
+            <div className='social-icons'>
+                    <a href='https://www.linkedin.com/in/aziz-soran/' target='_blank'>
+                        <img src={linkedInIcon} alt='LinkedIn' />
+                    </a>
+                    <a href='https://github.com/Soran03' target='_blank'>
+                        <img src={githubIcon} alt='GitHub' />
+                    </a>
+                    <a href='#Contact'>
+                        <img src={emailIcon} alt='Email' />
+                    </a>
+            </div>
             <div className='content'>
                 <h2 className='hi-text'>Hey there! I'm</h2>
                 <h1 className='title'>Soran Aziz</h1>
                 <p className='description'> Eager to take my full-stack development skills to the professional level, delivering 
                     high-quality, innovative solutions. </p>
-                <a href='#' className='projects-btn'>Projects</a>
+                <a href='#Projects' className='projects-btn'>See my work</a>
             </div>
             <img className='profile-image' src={profileImage} alt='Profile Image' />
-            <div className='social-icons'>
-                    <a href='https://www.linkedin.com/in/aziz-soran/'>
-                        <img src={linkedInIcon} alt='LinkedIn' />
-                    </a>
-                    <a href='https://github.com/Soran03'>
-                        <img src={githubIcon} alt='GitHub' />
-                    </a>
-                    <a href='#'>
-                        <img src={emailIcon} alt='Email' />
-                    </a>
-            </div>
+
             <div className='upArrow'>
                 <a href='#'>
                     <img src='/src/assets/circle-up-icon.svg' className='upArrowImage' />

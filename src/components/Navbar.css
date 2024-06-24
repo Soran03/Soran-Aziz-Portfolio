@@ -1,4 +1,6 @@
 .navbar {
+
+    top: 0;
     padding: 1rem 10%;
     display: flex;
     justify-content: space-between;
@@ -7,6 +9,7 @@
     font-weight: 400;
     /* background: -webkit-radial-gradient( #000c127e, #0000006f); */
     background: linear-gradient( #000c12 20%, transparent);
+    z-index: 10;
 
     /* border-radius: 100px; */
     /* border: 4px solid #001E2D ; */

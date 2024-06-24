@@ -9,9 +9,6 @@ function Navbar() {
             </div>
             <ul className='navbar-nav'>
                 <li className='nav-item'>
-                    <a href='#'>Home</a>
-                </li>
-                <li className='nav-item'>
                     <a href='#About'>About</a>
                 </li>
                 <li className='nav-item'>
@@ -19,6 +16,9 @@ function Navbar() {
                 </li>
                 <li className='nav-item'>
                     <a href='#Projects'>Projects</a>
+                </li>
+                <li className='nav-item'>
+                    <a href='#Contact'>Contact</a>
                 </li>
             </ul>
         </nav>
