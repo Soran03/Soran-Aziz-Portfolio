@@ -12,13 +12,13 @@ function Navbar() {
                     <a href='#'>Home</a>
                 </li>
                 <li className='nav-item'>
-                    <a href='#about'>About</a>
+                    <a href='#About'>About</a>
                 </li>
                 <li className='nav-item'>
-                    <a href='#projects'>Projects</a>
+                    <a href='#Skills'>Skills</a>
                 </li>
                 <li className='nav-item'>
-                    <a href='#connect'>Connect</a>
+                    <a href='#Projects'>Projects</a>
                 </li>
             </ul>
         </nav>

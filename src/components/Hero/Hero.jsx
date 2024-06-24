@@ -13,7 +13,8 @@ function Hero() {
             <div className='content'>
                 <h2 className='hi-text'>Hey there! I'm</h2>
                 <h1 className='title'>Soran Aziz</h1>
-                <p className='description'> Eager to take my full-stack development skills to the professional level, delivering high-quality, innovative solutions. </p>
+                <p className='description'> Eager to take my full-stack development skills to the professional level, delivering 
+                    high-quality, innovative solutions. </p>
                 <a href='#' className='projects-btn'>Projects</a>
             </div>
             <img className='profile-image' src={profileImage} alt='Profile Image' />
@@ -27,7 +28,13 @@ function Hero() {
                     <a href='#'>
                         <img src={emailIcon} alt='Email' />
                     </a>
-                </div>
+            </div>
+            <div className='upArrow'>
+                <a href='#'>
+                    <img src='/src/assets/circle-up-icon.svg' className='upArrowImage' />
+
+                </a>
+            </div>
             <div className='blur1' />
             <div className='blur2' />
             <div className='blur3' />
@@ -36,3 +43,6 @@ function Hero() {
 }
 
 export default Hero;
+
+
+

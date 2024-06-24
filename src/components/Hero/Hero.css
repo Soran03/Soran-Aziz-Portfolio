@@ -3,9 +3,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 5rem;
+    /* margin-top: 5rem;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 10%; */
+    padding-top: 5rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 8rem;
+    /* overflow: hidden; */
 }
 
 .content {
@@ -42,7 +47,7 @@
     font-weight: 700;
     margin-top: -0.5rem;
     line-height: 1;
-    background: -webkit-radial-gradient(#00ffc8, #0491c5);
+    background: -webkit-radial-gradient(#71ffe0, #0491c5);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
@@ -91,11 +96,12 @@
     justify-content: space-between;
     gap: 2rem;
     align-self: center;
-    background: -webkit-radial-gradient( #000c126f, #0000006f);
+    background: -webkit-radial-gradient( #000c127e, #0000006f);
     padding: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     border-radius: 100px;
+    z-index: 5;
 }
 
 .social-icons a {
@@ -108,7 +114,7 @@
     
     width: 3rem; 
     height: 3rem; 
-    transition: 0.5s;
+    transition: 0.3s;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(107%) contrast(92%);
 }
 
@@ -126,6 +132,8 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+
 }
 
 @keyframes floating {
@@ -140,6 +148,30 @@
     }
 }
 
+.upArrow {
+    background: -webkit-radial-gradient( #000c127e, #0000006f);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+    border-radius: 100px;
+
+}
+.upArrowImage {
+    width: 3rem;
+    height: 3rem;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(107%) contrast(92%);
+    transition: 0.3s;
+
+    &:hover {
+        scale: 1.2 1.2;
+        filter: invert(47%) sepia(73%) saturate(457%) hue-rotate(144deg) brightness(96%) contrast(95%);
+
+    }
+}
+
+
 
  .blur1 {
     position: absolute;
@@ -149,7 +181,7 @@
     border: 764px;
     background: #023047;
     z-index: -1;
-    filter: blur(100px);
+    filter: blur(150px);
 }
 
 @media screen and (max-width:830px){

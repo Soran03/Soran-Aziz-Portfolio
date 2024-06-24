@@ -5,7 +5,9 @@
     align-items: center;
     font-family:'Poppins';
     font-weight: 400;
-    background: -webkit-radial-gradient( #000c126f, #0000006f);
+    /* background: -webkit-radial-gradient( #000c127e, #0000006f); */
+    background: linear-gradient( #000c12 20%, transparent);
+
     /* border-radius: 100px; */
     /* border: 4px solid #001E2D ; */
 

@@ -1,0 +1,77 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    padding-top: 4rem;
+    background-color: #000a0f;
+    z-index: 0;
+    
+}
+
+.glow1 {
+    position: absolute;
+    height: 30rem;
+    width: 30rem;
+    top: 10rem;
+    border: 764px;
+    background: #00678992;
+    z-index: -1;
+    filter: blur(100px);
+}
+
+.mainImage {
+    width: 80%;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    background: -webkit-radial-gradient(#00ffc8, #0491c5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: -1rem;
+    margin-bottom: 4rem ;
+    z-index: 1;
+    text-align: center;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: whitesmoke;
+
+
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.skillsItem {
+    background: linear-gradient(#002736, transparent 99%);
+ height: 100px;
+ width: 100px;
+ padding: 0.6rem;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-items: center;
+ align-items: center;
+}
+.skillsItem img {
+    width: 50px;
+}
+.skillsItem p {
+    color: whitesmoke;
+    text-align: center;
+}
