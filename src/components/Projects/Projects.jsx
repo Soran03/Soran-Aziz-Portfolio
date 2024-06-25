@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import styles from './Projects.module.css';
 
+import isoconnectImage from "/src/assets/isoconnect-hero-image.png"
+import flexidriveImage from "/src/assets/flexidrive-hero-image.png"
+import portfolioImage from "/src/assets/portfolio-hero-image.png"
+
 
 function Projects() {
     useEffect(() => {
@@ -30,7 +34,7 @@ function Projects() {
 
             <ul className={styles.projectsList}>
                 <li className={styles.leftColumn}>
-                    <img className={styles.hidden} src="/src/assets/isoconnect-hero-image.png" alt="ISOConnect" />
+                    <img className={styles.hidden} src={isoconnectImage} alt="ISOConnect" />
                     <div className={styles.projectContent}>
                         <h2 className={styles.isoconnectHeading}>ISOConnect</h2>
                         <p className={styles.projectDescription}>The full-stack Android application designed to enhance communication
@@ -48,7 +52,7 @@ function Projects() {
                     </div>
                 </li>
                 <li className={styles.rightColumn}>
-                    <img className={styles.hidden}  src="/src/assets/flexidrive-hero-image.png" alt="FlexiDrive" />
+                    <img className={styles.hidden}  src={flexidriveImage} alt="FlexiDrive" />
                     <div className={styles.projectContent}>
                         <h2 className={styles.flexidriveHeading}>FlexiDrive</h2>
                         <p className={styles.projectDescription}>This is a full-stack Android application designed to streamline 
@@ -66,7 +70,7 @@ function Projects() {
                     </div>
                 </li>
                 <li className={styles.leftColumn}>
-                    <img className={styles.hidden}  src="/src/assets/portfolio-hero-image.png" alt="ISOConnect" />
+                    <img className={styles.hidden}  src={portfolioImage} alt="Potfolio" />
                     <div className={styles.projectContent}>
                         <h2 className={styles.portfolioHeading}>My Portfolio</h2>
                         <p className={styles.projectDescription}>A showcase of myself, and my software development projects, highlighting

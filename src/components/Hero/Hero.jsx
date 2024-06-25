@@ -4,6 +4,7 @@ import profileImage from '/src/assets/profile-image-circle.png'
 import linkedInIcon from '/src/assets/linkedin-icon.svg'
 import githubIcon from '/src/assets/github-icon.svg'
 import emailIcon from '/src/assets/email-icon.png'
+import upIcon from '/src/assets/circle-up-icon.svg'
 
 
 
@@ -50,7 +51,7 @@ function Hero() {
 
             <div className={`upArrow ${showUpArrow ? 'visible' : 'hidden'}`}>
                 <a href='#'>
-                    <img src='/src/assets/circle-up-icon.svg' className='upArrowImage' />
+                    <img src={upIcon} className='upArrowImage' />
 
                 </a>
             </div>

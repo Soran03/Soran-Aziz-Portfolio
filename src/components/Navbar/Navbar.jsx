@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 
+import menuIcon from '/src/assets/menu-icon.svg'
+import closeIcon from '/src/assets/close-icon.svg'
+
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -13,8 +16,8 @@ function Navbar() {
 
                 <img src={
                     menuOpen
-                    ? '/src/assets/close-icon.svg' 
-                    : '/src/assets/menu-icon.svg'}
+                    ? closeIcon 
+                    : menuIcon}
                 className={styles.menuIcon} 
                 alt='Menu Button'
                 onClick={() => setMenuOpen(!menuOpen)}/>

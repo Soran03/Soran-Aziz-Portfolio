@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from './Contact.module.css';
 
+import phoneIcon from '/src/assets/phone-icon.svg'
+import mailIcon from '/src/assets/mail-icon.svg'
+import linkedinIcon from '/src/assets/linkedin-icon.svg'
+import githubIcon from '/src/assets/github-icon.svg'
+
 
 function Contact() {
     return(
@@ -12,19 +17,19 @@ function Contact() {
 
                 <div className={styles.leftColumn}>
                     <div className={styles.contactInfoBox}>
-                        <img src='/src/assets/phone-icon.svg' />
+                        <img src={phoneIcon} />
                         <p>+44 7488 419875</p>
                     </div>
                     <div className={styles.contactInfoBox}>
-                    <img src='/src/assets/mail-icon.svg' />
+                    <img src={mailIcon} />
                     <p>azizsoran01@gmail.com</p>
                     </div>
                     <div className={styles.socialRow}>
                         <a href='https://www.linkedin.com/in/aziz-soran/' >
-                            <img src='/src/assets/linkedin-icon.svg' />
+                            <img src={linkedinIcon} />
                         </a>
                         <a href='https://github.com/Soran03'>
-                            <img src='/src/assets/github-icon.svg' />
+                            <img src={githubIcon} />
                         </a>
                     </div>
                 </div>

@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import styles from './About.module.css'
 import aboutImage from '/src/assets/full-img1.jpg'
+import universityIcon from '/src/assets/university-icon.svg'
+import calculatorIcon from '/src/assets/calculator-icon.svg'
+import devicesIcon from '/src/assets/devices-icon.svg'
 
 
 function About() {
@@ -32,7 +35,7 @@ function About() {
                 <img className={styles.aboutImg} src={aboutImage} alt='About Image'  />
                     <ul className={styles.content}>
                         <li className={`${styles.listItem} ${styles.hidden}`}>
-                            <img src='/src/assets/university-icon.svg' />
+                            <img src={universityIcon}/>
                             <div>
                                 <h3>Academic Journey</h3>
                                 <p>Having recently graduated with a First Class Bachelors in Computer Science from the University of Greenswich, I am now eager to transition 
@@ -40,7 +43,7 @@ function About() {
                             </div>
                         </li>
                         <li className={`${styles.listItem} ${styles.hidden}`}>
-                            <img src='/src/assets/calculator-icon.svg'/>
+                            <img src={calculatorIcon}/>
                             <div>
                                 <h3>Creative Problem Solver</h3>
                                 <p>With hands-on experience in mobile app development, backend services, API integrations, and now web development, I have developed a keen ability 
@@ -48,7 +51,7 @@ function About() {
                             </div>
                         </li>
                         <li className={`${styles.listItem} ${styles.hidden}`}>
-                            <img src='/src/assets/devices-icon.svg'/>
+                            <img src={devicesIcon}/>
                             <div>
                                 <h3>Technological Enthusiast</h3>
                                 <p>Committed to continuous learning and staying updated with the latest tech trends, I am ready to contribute to dynamic teams
