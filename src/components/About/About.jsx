@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './About.module.css'
 import aboutImage from '/src/assets/full-img1.jpg'
 
 
 function About() {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.show);
+                } 
+                else {
+                    entry.target.classList.remove(styles.show);
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            hiddenElements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
+    
     return(
         <section id='About' className={styles.container}>
             <div className={styles.patternBackground}></div>
@@ -11,7 +31,7 @@ function About() {
             <div className={styles.imageAndText}> 
                 <img className={styles.aboutImg} src={aboutImage} alt='About Image'  />
                     <ul className={styles.content}>
-                        <li className={styles.listItem}>
+                        <li className={`${styles.listItem} ${styles.hidden}`}>
                             <img src='/src/assets/university-icon.svg' />
                             <div>
                                 <h3>Academic Journey</h3>
@@ -19,7 +39,7 @@ function About() {
                                     into a professional role in software development. </p>
                             </div>
                         </li>
-                        <li className={styles.listItem}>
+                        <li className={`${styles.listItem} ${styles.hidden}`}>
                             <img src='/src/assets/calculator-icon.svg'/>
                             <div>
                                 <h3>Creative Problem Solver</h3>
@@ -27,7 +47,7 @@ function About() {
                                     to deliver scalable and efficient solutions.</p>
                             </div>
                         </li>
-                        <li className={styles.listItem}>
+                        <li className={`${styles.listItem} ${styles.hidden}`}>
                             <img src='/src/assets/devices-icon.svg'/>
                             <div>
                                 <h3>Technological Enthusiast</h3>

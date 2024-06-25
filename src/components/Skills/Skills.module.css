@@ -20,6 +20,22 @@
     background: #00678992;
     z-index: -1;
     filter: blur(100px);
+    animation-name: zoom;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out ;
+}
+
+@keyframes zoom{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .mainImage {
@@ -76,9 +92,24 @@
     text-align: center;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 @media screen and (max-width:830px){
     .container{
         padding: 5%;
+    }
+    .glow1 {
+        animation: none;
     }
     .mainImage {
         width: 100%;

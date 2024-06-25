@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css'
 import profileImage from '/src/assets/profile-image-circle.png'
 import linkedInIcon from '/src/assets/linkedin-icon.svg'
@@ -8,6 +8,24 @@ import emailIcon from '/src/assets/email-icon.png'
 
 
 function Hero() {
+    const [showUpArrow, setShowUpArrow] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 200) { // Show the arrow after scrolling down 200px
+                setShowUpArrow(true);
+            } else {
+                setShowUpArrow(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return(
         <section className='container'>
             <div className='social-icons'>
@@ -30,15 +48,14 @@ function Hero() {
             </div>
             <img className='profile-image' src={profileImage} alt='Profile Image' />
 
-            <div className='upArrow'>
+            <div className={`upArrow ${showUpArrow ? 'visible' : 'hidden'}`}>
                 <a href='#'>
                     <img src='/src/assets/circle-up-icon.svg' className='upArrowImage' />
 
                 </a>
             </div>
             <div className='blur1' />
-            <div className='blur2' />
-            <div className='blur3' />
+
         </section>
     )
 }

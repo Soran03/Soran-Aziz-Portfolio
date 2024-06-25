@@ -23,6 +23,8 @@
 .title {
     font-size: 4rem;
     font-weight: 700;
+    text-align: center;
+
     background: -webkit-radial-gradient(#00ffc8, #0491c5);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -87,6 +89,8 @@
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
+
+.inputBox input[type="email"],
 .inputBox input[type="text"],
 .inputBox textarea {
     width: 100%;
@@ -98,6 +102,9 @@
     border-radius: 4px;
     outline: none;
     background: #00364e;
+    color: whitesmoke;
+    font-family: Poppins;
+    font-size: 1rem;
 }
 .inputBox textarea {
     resize: vertical;
@@ -143,10 +150,12 @@
 
 
 @media screen and (max-width:830px){
+    .container{
+        padding: 5%;
+    }
     .subtitle{ font-size: 1.5rem;}
     .title {
         font-size: 2rem;
-        text-align: center;
     }
     
     .container2 {
@@ -156,10 +165,14 @@
         width: 100%;
     }
     .rightColumn{
-        display: none;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
     }
     .socialRow {
         align-self: center;
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
     }
 
 }

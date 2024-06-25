@@ -29,22 +29,26 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className={styles.rightColumn}>
+                <div className={styles.rightColumn}>               
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="4f024b23-8f97-431f-babf-871be4a44f35" />
                     <div className={styles.inputBox}>
-                        <input type='text' name='' required='required' />
+                        <input type='text' name='name' required='required' />
                         <span>Full Name</span>
                     </div>
                     <div className={styles.inputBox}>
-                        <input type='text' name='' required='required' />
+                        <input type='email' name='email' required='required' />
                         <span>Email Address</span>
                     </div>
                     <div className={styles.inputBox}>
-                        <textarea required='required' />
+                        <textarea name='message' required='required' />
                         <span>Your Message...</span>
                     </div>
                     <div className={styles.inputBox}>
-                        <input type='submit' name='' value='Send' />
+                        <input type='submit' value='Send' />
                     </div>
+                </form>
+
                 </div>
             </div>
         </section>

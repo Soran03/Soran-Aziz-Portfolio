@@ -1,27 +1,26 @@
 import './App.css';
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Policies from './components/Policies/Policies';
+import Home from './components/Home'
 
 
 
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        {/* Home Page */}
+        <Route index element={<Home />} />
+
+        {/* Policies Page */}
+        <Route path="/policies" element={<Policies />} />
+      </Routes>
+
+    </BrowserRouter>
+
   );
 }
 

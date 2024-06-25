@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Projects.module.css';
 
 
 function Projects() {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.show);
+                } 
+
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            hiddenElements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
+
+
+
     return(
         <section id='Projects' className={styles.container}>
             <div className={styles.backgroundPattern}></div>
@@ -10,7 +30,7 @@ function Projects() {
 
             <ul className={styles.projectsList}>
                 <li className={styles.leftColumn}>
-                    <img src="/src/assets/isoconnect-hero-image.png" alt="ISOConnect" />
+                    <img className={styles.hidden} src="/src/assets/isoconnect-hero-image.png" alt="ISOConnect" />
                     <div className={styles.projectContent}>
                         <h2 className={styles.isoconnectHeading}>ISOConnect</h2>
                         <p className={styles.projectDescription}>The full-stack Android application designed to enhance communication
@@ -28,7 +48,7 @@ function Projects() {
                     </div>
                 </li>
                 <li className={styles.rightColumn}>
-                    <img src="/src/assets/flexidrive-hero-image.png" alt="FlexiDrive" />
+                    <img className={styles.hidden}  src="/src/assets/flexidrive-hero-image.png" alt="FlexiDrive" />
                     <div className={styles.projectContent}>
                         <h2 className={styles.flexidriveHeading}>FlexiDrive</h2>
                         <p className={styles.projectDescription}>This is a full-stack Android application designed to streamline 
@@ -46,7 +66,7 @@ function Projects() {
                     </div>
                 </li>
                 <li className={styles.leftColumn}>
-                    <img src="/src/assets/portfolio-hero-image.png" alt="ISOConnect" />
+                    <img className={styles.hidden}  src="/src/assets/portfolio-hero-image.png" alt="ISOConnect" />
                     <div className={styles.projectContent}>
                         <h2 className={styles.portfolioHeading}>My Portfolio</h2>
                         <p className={styles.projectDescription}>A showcase of myself, and my software development projects, highlighting

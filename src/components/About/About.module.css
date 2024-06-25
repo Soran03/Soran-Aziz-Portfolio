@@ -65,20 +65,22 @@ box-shadow: 0 0 30px 15px #000000;
 
 .listItem {
     display: flex;
-    gap: 2rem;
+    gap: 0rem;
     align-items: center;
     background: linear-gradient( 90deg, #002736, transparent);
     background-size: 0% 100%;
     background-repeat: no-repeat;
     border-radius: 40px;
     padding: 0.5rem 2rem;
-    transition:  0.3s ease-in-out;
-}
-.listItem:hover {
-    background-size: 100% 100%;
+    transition: background-size 0.3s ease-in-out;
 }
 .listItem:hover img {
     width: 50px;
+    margin-right: 2rem;
+    
+}
+.listItem:hover {
+    background-size: 100% 100%;
 }
 
 
@@ -86,7 +88,8 @@ box-shadow: 0 0 30px 15px #000000;
     height: 50px;
     width: 0px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(197deg) brightness(107%) contrast(92%);
-    transition: 0.5s;
+    transition: width 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+    z-index: 3;
 }
 .content h3 {
     width:fit-content;
@@ -100,55 +103,36 @@ box-shadow: 0 0 30px 15px #000000;
     text-align: justify;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 
 
 @media screen and (max-width:830px){
     .container{
         padding: 5%;
+        padding-top: 0;
+        padding-bottom: 10%;
     }
+    .title {
+        font-size: 3rem;
+    }
+
     .aboutImg {
         display: none;
     }
-    .content img{
-        width: 50px;
+    .content {
     }
-}
-
-
-
-
-
-.blur1 {
-    position: absolute;
-    height: 40vw;
-    width: 40vw;
-    top: -8rem;
-    border: 764px;
-    background: #00182092;
-    z-index: -1;
-    filter: blur(200px);
-}
-
-.blur2 {
-    position: absolute;
-    height: 40vw;
-    width: 40vw;
-    top: 12rem;
-    right: 0;
-    border: 764px;
-    background: #95725528;
-    z-index: -1;
-    filter: blur(200px);
-}
-
-.blur3 {
-    position: absolute;
-    height: 40vw;
-    width: 40vw;
-    top: 28rem;
-    left: 0;
-    border: 764px;
-    background: #95558b28;
-    z-index: -1;
-    filter: blur(200px);
+    .content img{
+        display: none;
+    }
 }
